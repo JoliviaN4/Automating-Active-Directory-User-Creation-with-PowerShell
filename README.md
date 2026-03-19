@@ -8,136 +8,115 @@ In this section of the lab, Windows PowerShell ISE was used to automate the crea
 
 <h2>Environments and Technologies Used</h2>
 
+- Microsoft Azure (Virtual Machines)
+- Active Directory Domain Services (AD DS)
 - Active Directory Users and Computers (ADUC)
-- Windows PowerShell
+- Windows PowerShell ISE
 - Active Directory PowerShell Module
 - Remote Desktop Protocol (RDP)
   
 <h2>Operating Systems Used </h2>
 
-- Windows Server 2022 
+- Windows Server 2022 (Domain Controller: DC-1)
+- Windows 11 (Client Machine: Client-1)
 
 <h2>Open and Review the PowerShell User Creation Script</h2>
 
-<p>
 ![images/LabB5.png](images/LabB5.png)
 </p>
 <p>
- Step-by-step
+Step-by-step
 
 1. Open Windows PowerShell ISE as Administrator.
-2. Load the user creation script.
-3. Review the configuration variables at the top of the script.
-4. Confirm the password value and number of accounts to generate.
-5. Confirm the script points to the correct Organizational Unit path.
-
+2. Load the user creation script into the editor pane.
+3. Review the variables and configuration settings in the script.
+4. Confirm the password value assigned to generated accounts.
+5. Confirm the number of users the script is set to create.
+6. Review the script structure before execution.
 
 Explanation: 
- This is the preparation stage. It ensures the script is configured correctly before user accounts are created in bulk.
+ This step represents the preparation stage of the automation process. Reviewing the script ensures that account settings, naming structure, and configuration values are correct before creating users in Active Directory.
 
-<h2>Configuration Required After Installation</h2>
-</p>
-<br />
+<h2>Review the New-ADUser Automation Logic</h2>
 
-<p>
-![images/Lab-B5.png](images/LabB5.png)
+
+![images/LabB7.png](images/LabB7.png)
 </p>
 <p>
 Step-by-step
   
-- Waited for the installation to finish.
-- Reviewed the completion message in the wizard.
-- Confirmed that the message stated:
-- installation succeeded
-- additional steps are required
-- Located the link:
-- Promote this server to a domain controller
-- Prepared to begin the post-deployment configuration process.
+1. Review the section of the script responsible for account creation.
+2. Confirm a loop is used to generate multiple users.
+3. Verify that first and last names are automatically generated.
+4. Confirm the names are combined into a username format.
+5. Review how the password is converted into a secure string.
+6. Confirm the New-ADUser cmdlet is used to create each account.
+7. Verify the Path parameter points to the _EMPLOYEES Organizational Unit.
+8. Confirm the accounts are created as enabled.
 
 Explanation:
- Installing the AD DS role does not automatically create a domain. At this point, the role is installed, but the server still needs to be promoted to a Domain Controller before it can manage users, computers, and authentication.
-
+ This step highlights the core automation logic. PowerShell replaces manual account creation by generating users programmatically, demonstrating how administrators efficiently manage large environments using scripting.
 
 <h2>Start the Domain Controller Promotion Process</h2>
 <br />
 
-<p>
-<img width="1512" height="982" alt="LabA4" src="https://github.com/user-attachments/assets/94b0c6c2-2acb-4ba0-8751-4800df044dc5" />
+![images/LabB8.png](images/LabB8.png)
 </p>
 <p>
 Step-by-step
 
-- Returned to Server Manager.
-- Clicked the notification flag in the upper-right corner.
-- Reviewed the post-deployment message for Active Directory Domain Services.
-- Clicked Promote this server to a domain controller.
-- Waited for the Active Directory Domain Services Configuration Wizard to open.
-
+1. Click Run Script in Windows PowerShell ISE.
+2. Monitor the console output in the lower pane.
+3. Confirm output lines such as Creating user: appear.
+4. Verify that usernames are generated continuously.
+5. Allow the script to complete the user creation process.
 
 Explanation:
- This step begins the actual domain setup process. In a real IT environment, this is where the server transitions from being a basic Windows Server installation to becoming a Domain Controller.
+ This step confirms that the script executes successfully. The live output provides proof that user accounts are being created in real time through automation.
+
+<h2>Verify Accounts in Active Directory Users and Computers</h2>
 
 
-<h2>Configure Domain Controller Options</h2>
-<br />
-
-<p>
-<img width="1536" height="1024" alt="LabA6" src="https://github.com/user-attachments/assets/f5a3b19a-3c59-4c72-b092-452d153f1819" />
+![images/LabB11.png](images/LabB11.png)
 <p>
 Step-by-step
 
-Continued through the configuration wizard after selecting deployment settings.
-
-
-- Reached the Domain Controller Options page.
-- Set the Forest functional level.
-- Set the Domain functional level.
-- Left DNS Server checked.
-- Left Global Catalog (GC) checked.
-- Left Read Only Domain Controller (RODC) unchecked.
-- Entered the Directory Services Restore Mode (DSRM) password.
-- Confirmed the DSRM password.
-- Clicked Next.
+1. Open Active Directory Users and Computers.
+2. Expand the domain on the left panel.
+3. Select the _EMPLOYEES Organizational Unit.
+4. Review the list of users displayed.
+5. Confirm that multiple accounts created by the script appear in the OU.
 
 Explanation:
-   These settings define how the Domain Controller will function in the environment. DNS is required because Active Directory depends heavily on name resolution, and the DSRM password is used for recovery and troubleshooting tasks if Active Directory needs to be restored.
+  This step verifies that the script successfully creates user accounts and places them in the correct Organizational Unit. It confirms that the automation process writes data into Active Directory as expected.
+
+<h2>Attempt Sign-In with a Generated User Account</h2>
 
 
-<h2>Run the Prerequisites Check</h2>
-<br />
-
-<p>
-<img width="1512" height="982" alt="LabA9" src="https://github.com/user-attachments/assets/9b4f8844-971a-4f73-b901-fd3b37461e68" />
+![images/LabB17.png](images/LabB17.png)
 </p>
 <p>
 Step-by-step
 
-1. Continued through the remaining configuration pages.
-2. Reached Prerequisites Check.
-3. Waited while Windows validated the configuration.
-4. Reviewed any warnings or informational notes.
-5. Confirmed that the checks passed successfully.
-6. Clicked Install to begin the Domain Controller promotion
+1. Access the client machine or open a Remote Desktop session.
+2. Enter the username of a generated account.
+3. Input the password defined in the script.
+4. Begin the sign-in process using the domain account.
 
 Explanation:
- This validation step is important because it confirms that the server is properly configured for promotion. In a production environment, this helps prevent configuration problems before Active Directory is installed.
+ This step tests authentication using a newly created account. It verifies that the account credentials are recognized by Active Directory and that the login process initiates successfully.
 
-<h2>Domain Controller Promotion Completed</h2>
-<br />
+<h2>Confirm Successful Login with the Generated User</h2>
 
-<p>
-<img width="1512" height="982" alt="LabA21" src="https://github.com/user-attachments/assets/6f947d72-6a9b-426d-a007-65e1d9c532bf" />
+![images/LabB18.png](images/LabB18.png)
 </p>
 <p>
 Step-by-step
 
-1. Waited for the installation and promotion process to complete.
-2. Reviewed the final result message.
-3. Confirmed that the message stated:
-4. This server was successfully configured as a domain controller
-5. Reviewed any final notes shown by the wizard.
-6. Prepared for the automatic sign-out and restart.
-                               
+1. Allow the login process to complete.
+2. Confirm the user profile begins loading.
+3. Verify access to the client machine under the generated account.
 
 Explanation:
- This step confirms that Active Directory has been successfully deployed. At this point, the server is no longer just a Windows Server VM — it is now a working Domain Controller capable of managing the domain.
+ This is the final validation step. It confirms that the PowerShell-created accounts are fully functional and can successfully authenticate and access systems within the domain environment.
+
