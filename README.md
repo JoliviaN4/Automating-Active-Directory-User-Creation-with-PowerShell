@@ -28,7 +28,7 @@ In this section of the lab, Windows PowerShell ISE was used to automate the crea
 Step-by-step
 
 1. Open Windows PowerShell ISE as Administrator.
-2. Load the user creation script into the editor pane.
+2. Load the user creation script into the editor panel.
 3. Review the variables and configuration settings in the script.
 4. Confirm the password value assigned to generated accounts.
 5. Confirm the number of users the script is set to create.
