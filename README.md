@@ -12,18 +12,15 @@ In this section of the lab, Windows PowerShell ISE was used to automate the crea
 - Windows PowerShell
 - Active Directory PowerShell Module
 - Remote Desktop Protocol (RDP)
-- Windows Server 2022
-
-
+  
 <h2>Operating Systems Used </h2>
 
 - Windows Server 2022 
-- Windows 11 pro
 
-<h2>Open and Review the PowerShell Script</h2>
+<h2>Open and Review the PowerShell User Creation Script</h2>
 
 <p>
-<img width="1512" height="982" alt="LabB1" src="https://github.com/user-attachments/assets/a1c8ce1a-baaa-4127-a01a-210afdd3c20f" />
+![images/LabB5.png](images/LabB5.png)
 </p>
 <p>
  Step-by-step
@@ -43,7 +40,7 @@ Explanation:
 <br />
 
 <p>
-<img width="1512" height="982" alt="LabA3" src="https://github.com/user-attachments/assets/57014d9e-7c7f-4571-a7e5-a73cbfd94641" />
+![images/Lab-B5.png](images/LabB5.png)
 </p>
 <p>
 Step-by-step
