@@ -57,8 +57,8 @@ Step-by-step
 Explanation:
  This step highlights the core automation logic. PowerShell replaces manual account creation by generating users programmatically, demonstrating how administrators efficiently manage large environments using scripting.
 
-<h2>Start the Domain Controller Promotion Process</h2>
-<br />
+<h2>Execute the Script and Create User Accounts</h2>
+
 
 ![images/LabB8.png](images/LabB8.png)
 </p>
