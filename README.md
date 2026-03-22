@@ -28,7 +28,7 @@ In this section of the lab, Windows PowerShell ISE was used to automate the crea
 Step-by-step
 
 1. Open Windows PowerShell ISE as Administrator.
-2. Load the user creation script into the editor panel.
+2. Load the user creation script into the editor pane.
 3. Review the variables and configuration settings in the script.
 4. Confirm the password value assigned to generated accounts.
 5. Confirm the number of users the script is set to create.
@@ -38,7 +38,6 @@ Explanation:
  This step represents the preparation stage of the automation process. Reviewing the script ensures that account settings, naming structure, and configuration values are correct before creating users in Active Directory.
 
 <h2>Review the New-ADUser Automation Logic</h2>
-
 
 ![images/LabB7.png](images/LabB7.png)
 </p>
@@ -82,7 +81,7 @@ Explanation:
 Step-by-step
 
 1. Open Active Directory Users and Computers.
-2. Expand the domain on the left panel.
+2. Expand the domain on the left pane.
 3. Select the _EMPLOYEES Organizational Unit.
 4. Review the list of users displayed.
 5. Confirm that multiple accounts created by the script appear in the OU.
@@ -93,7 +92,7 @@ Explanation:
 <h2>Attempt Sign-In with a Generated User Account</h2>
 
 
-![images/LabB17.png](images/LabB17.png)
+![images/LabB14..png](images/LabB14..png)
 </p>
 <p>
 Step-by-step
