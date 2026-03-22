@@ -80,11 +80,11 @@ Explanation:
 <p>
 Step-by-step
 
-1. Open Active Directory Users and Computers.
+1. Open **Active Directory Users and Computers**.
 2. Expand the domain on the left pane.
-3. Select the _EMPLOYEES Organizational Unit.
+3. Locate and Select the **_EMPLOYEES Organizational Unit**.
 4. Review the list of users displayed.
-5. Confirm that multiple accounts created by the script appear in the OU.
+5. Select a user account that will be used for attempt log-in.
 
 Explanation:
   This step verifies that the script successfully creates user accounts and places them in the correct Organizational Unit. It confirms that the automation process writes data into Active Directory as expected.
@@ -97,8 +97,8 @@ Explanation:
 <p>
 Step-by-step
 
-1. Access the client machine or open a Remote Desktop session.
-2. Enter the username of a generated account.
+1. Access the client machine.
+2. Enter the username of the generated account.
 3. Input the password defined in the script.
 4. Begin the sign-in process using the domain account.
 
