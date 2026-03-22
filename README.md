@@ -107,7 +107,7 @@ Explanation:
 
 <h2>Confirm Successful Login with the Generated User</h2>
 
-![images/LabB18.png](images/LabB18.png)
+![images/LabC21.png](images/LabC21.png)
 </p>
 <p>
 Step-by-step
