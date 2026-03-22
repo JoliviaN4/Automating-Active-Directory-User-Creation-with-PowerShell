@@ -119,3 +119,6 @@ Step-by-step
 Explanation:
  This is the final validation step. It confirms that the PowerShell-created accounts are fully functional and can successfully authenticate and access systems within the domain environment.
 
+<h2>Conculsion</h2>
+
+This phase of the lab used Windows PowerShell ISE to automate the creation of domain user accounts in Active Directory. A script was configured with a default password, a target number of accounts, and the New-ADUser cmdlet to create users inside the _EMPLOYEES Organizational Unit. After execution, the accounts appeared in Active Directory Users and Computers, their group membership was verified, and a generated user successfully logged into the client machine.
