@@ -1,5 +1,5 @@
 <p align="center">
-<img width="192" height="216" alt="image" src="https://github.com/user-attachments/assets/acb9cd6f-e1b2-4da1-8a1c-196a387253ea" />
+<img width="282" height="179" alt="image" src="https://github.com/user-attachments/assets/a94ba276-a235-4ea5-8d41-59da640f4eeb" />
 </p>
 
 <h1>Automating Active Directory User Creation with PowerShell</h1>
