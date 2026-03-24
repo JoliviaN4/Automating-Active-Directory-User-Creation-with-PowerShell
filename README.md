@@ -80,9 +80,9 @@ Step-by-step
 <p>
 Step-by-step
 
-1. Open **Active Directory Users and Computers**.
+1. Open Active Directory Users and Computers.
 2. Expand the domain on the left pane.
-3. Locate and Select the **_EMPLOYEES Organizational Unit**.
+3. Locate and Select the _EMPLOYEES Organizational Unit.
 4. Review the list of users displayed.
 5. Select a user account that will be used for attempt log-in.
 
