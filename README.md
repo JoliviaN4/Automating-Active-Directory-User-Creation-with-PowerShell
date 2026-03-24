@@ -27,12 +27,12 @@ In this section of the lab, Windows PowerShell ISE was used to automate the crea
 <p>
 Step-by-step
 
-1. Open Windows PowerShell ISE as Administrator.
+1. Open **Windows PowerShell ISE as Administrator.**
 2. Load the user creation script into the editor pane.
 3. Review the variables and configuration settings in the script.
 4. Confirm the password value assigned to generated accounts.
 5. Confirm the number of users the script is set to create.
-6. Review the script structure before execution.
+6. **Review** the script structure before execution.
 
 **Explanation:** 
  This step represents the preparation stage of the automation process. Reviewing the script ensures that account settings, naming structure, and configuration values are correct before creating users in Active Directory.
@@ -49,24 +49,23 @@ Step-by-step
 3. Verify that first and last names are automatically generated.
 4. Confirm the names are combined into a username format.
 5. Review how the password is converted into a secure string.
-6. Confirm the New-ADUser cmdlet is used to create each account.
+6. Confirm the **New-ADUser cmdlet** is used to create each account.
 7. Verify the Path parameter points to the _EMPLOYEES Organizational Unit.
-8. Confirm the accounts are created as enabled.
+8. Confirm the accounts are created as **enabled.**
 
 **Explanation:**
  This step highlights the core automation logic. PowerShell replaces manual account creation by generating users programmatically, demonstrating how administrators efficiently manage large environments using scripting.
 
 <h2>Execute the Script and Create User Accounts</h2>
 
-
 ![images/LabB8.png](images/LabB8.png)
 </p>
 <p>
 Step-by-step
 
-1. Click Run Script in Windows PowerShell ISE.
+1. Click **Run Script** in Windows PowerShell ISE.
 2. Monitor the console output in the lower pane.
-3. Confirm output lines such as Creating user: appear.
+3. Confirm output lines such as Creating user: **appear**
 4. Verify that usernames are generated continuously.
 5. Allow the script to complete the user creation process.
 
@@ -75,22 +74,20 @@ Step-by-step
 
 <h2>Verify Accounts in Active Directory Users and Computers</h2>
 
-
 ![images/LabB11.png](images/LabB11.png)
 <p>
 Step-by-step
 
-1. Open Active Directory Users and Computers.
-2. Expand the domain on the left pane.
-3. Locate and Select the _EMPLOYEES Organizational Unit.
+1. Open **Active Directory Users and Computers.**
+2. Expand the **domain** on the left pane.
+3. Locate and Select the **_EMPLOYEES Organizational Unit.**
 4. Review the list of users displayed.
-5. Select a user account that will be used for attempt log-in.
+5. Select a **user account** that will be used for attempt log-in.
 
 **Explanation:**
   This step verifies that the script successfully creates user accounts and places them in the correct Organizational Unit. It confirms that the automation process writes data into Active Directory as expected.
 
 <h2>Attempt Sign-In with a Generated User Account</h2>
-
 
 ![images/LabB14..png](images/LabB14..png)
 </p>
@@ -98,8 +95,8 @@ Step-by-step
 Step-by-step
 
 1. Access the client machine.
-2. Enter the username of the generated account.
-3. Input the password defined in the script.
+2. Enter the **username of the generated account.**
+3. Input the **password defined in the script.**
 4. Begin the sign-in process using the domain account.
 
 **Explanation:**
@@ -114,7 +111,7 @@ Step-by-step
 
 1. Allow the login process to complete.
 2. Confirm the user profile begins loading.
-3. Verify access to the client machine under the generated account.
+3. **Verify** access to the client machine under the generated account.
 
 **Explanation:**
  This is the final validation step. It confirms that the PowerShell-created accounts are fully functional and can successfully authenticate and access systems within the domain environment.
